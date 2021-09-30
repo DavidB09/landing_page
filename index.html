@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimi's Guitar Shop</title>
+    <meta name="author" content="David Brunner">
+    <meta name="keywords" content="Jimi's Guitar Shop, Luthier, Guitar Set-Up, Guitar Repair, Guitar Build">
+    <meta name="description" content="A landing page for Jimi's Guitar Shop, a fictional guitar luthier shop.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-container-logo flex-column flex-center">
+            <img class="image-logo" src="assets/guitar_logo.png" alt="Jimi's Guitar logo" />
+            <p class="p-logo"> Jimi's Guitar Shop </p>
+        </div>
+
+        <nav class="flex-row flex-center">
+            <a href="#main-services">Services</a>|
+            <a href="#main-reviews">Reviews</a>|
+            <a href="#main-contact">Contact Us</a>|
+            <a href="#main-location">Location</a>
+        </nav>
+
+        <div class="header-container-welcome flex-column flex-center">
+            <h1>Welcome to <span class="shop-name">Jimi's Guitar Shop!</span></h1>
+            <p class="p-welcome">Where attention to detail is paramount</p>
+            <a class="button-explore" href="#main-services">Explore More!</a>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="main-services" class="main-container-services flex-column flex-center initial-slide">
+            <h2>View Our Selection of Services</h2>
+
+            <div class="flex-row flex-center">
+                <img class="image-service" src="assets/setup.jpg" alt="Set-up picture" />
+                <img class="image-service" src="assets/repair.jpg" alt="Repair picture" />
+                <img class="image-service" src="assets/build.jpg" alt="Build picture" />
+            </div>
+
+            <div class="flex-row flex-center">
+                <div class="container-service">
+                    <div class="heading-service">
+                        <h3>Guitar Set-up</h3>
+                        <p>We will perfectly set up your guitar to your needs.</p>
+                    </div>
+                    <h4>* $20-$40</h4>
+                    <ul class="description-service">
+                        <li>Truss Rod Adjustment</li>
+                        <li>String Height Adjustment</li>
+                        <li>Pickup Height Adjustment</li>
+                        <li>In-Depth Cleaning</li>
+                    </ul>
+                </div>
+
+                <div class="container-service">
+                    <div class="heading-service">
+                        <h3>Repair</h3>
+                        <p>We will replace and repair any broken pieces of your guitar</p>
+                    </div>
+                    <h4>* $60-$120</h4>
+                    <ul class="description-service">
+                        <li>Body Repair</li>
+                        <li>Exchange Strings</li>
+                        <li>Adjust Necessary Parts</li>
+                        <li>In-Depth Cleaning</li>
+                    </ul>
+                </div>
+
+                <div class="container-service">
+                    <div class="heading-service">
+                        <h3>Build</h3>
+                        <p>We will design and custom build a guitar to your desires and wants</p>
+                    </div>
+                    <h4>* $200+</h4>
+                    <ul class="description-service">
+                        <li>Build Entire Body</li>
+                        <li>Attach Desired Parts</li>
+                        <li>Attach New Strings</li>
+                        <li>Adjust and Retune</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="p-disclaimer">*Prices may adjust and vary according to specific needs</p>  
+
+            <div class="main-overlay hidden flex-column flex-center">
+                <div class="main-container-signup flex-column flex-center">
+                    <svg width="174" height="168" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path transform="rotate(-36.4599, 83.2793, 78.6348)" id="svg_7" d="m2.98766,60.64707l61.33796,0l18.9539,-58.21035l18.95391,58.21035l61.33795,0l-49.62336,35.97556l18.95488,58.21035l-49.62338,-35.97654l-49.62337,35.97654l18.95489,-58.21035l-49.62338,-35.97556z" stroke-width="0" stroke="#000" fill="#f76c1b"/>
+                            <path stroke-width="0" id="svg_6" d="m0.99815,64.02296l66.46256,0l20.53744,-63.02455l20.53746,63.02455l66.46255,0l-53.76924,38.95087l20.53851,63.02455l-53.76927,-38.95193l-53.76926,38.95193l20.53851,-63.02455l-53.76926,-38.95087z" stroke="#000" fill="#f76c1b"/>
+                            <text transform="rotate(-6.83847, 86.4807, 82.3006) matrix(0.934145, 0, 0, 1.03157, 20.9419, -7.07474)" font-style="normal" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Calistoga'" font-size="24" id="svg_1" y="94.76945" x="24.61671" stroke-width="0" stroke="#000" fill="#ffffff">15% Off</text>
+                        </g>
+                    </svg>
+
+                    <img class="button-close" src="assets/close_button.png"/>
+
+                    <h2>Join our community!</h2>
+                    <p class="p-signup">Recieve a <span>15%</span> discount on your next purchase (and much more) if you sign up for our monthly newsletter.</p>
+
+                    <div>
+                        <input class="input-email" title="Email Address" type="email" pattern=".+@.+\.com" placeholder="Your email address" />
+                        <button title="Submit" class="submit-email" type="submit">Sign up</button>
+                    </div>
+
+                    <div class="container-signup-disclaimer">
+                        <p class="p-disclaimer">*We promise not to misuse or sell any of your private information</p>
+                        <p class="p-disclaimer">**We also NEVER send any spam. Only one email per month. Otherwise you get to play Stairway to Heaven in our store for one week.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="main-reviews" class="main-container-reviews flex-column initial-slide">
+            <h2>Read Our Customer Reviews</h2>
+
+            <div class="container-review flex-column">
+                <div class="header-review">
+                    <h3>Great Set-up</h3>
+                    <div class="flex-row">
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                        <p class="review-star empty-star"></p>
+                    </div>
+                </div>
+
+                <p>My Les Paul hadn't seen a shop in several years so I decided it was time for a set-up. At Jim's all I needed to do was drop it off and pick it up the next day, no hassle whatsover! The luthier throughly cleaned the entire fretboard and even put on a new pair of strings with the truss rod adjustment. </p>
+
+                <div class="review-profile flex-row">
+                    <img alt="Customer Profile" src="assets/young_woman.jpg" />
+                    <h4>- Emma Shelby</h4>
+                </div>
+            </div>
+
+            <div class="container-review flex-column">
+                <div class="header-review">
+                    <h3>A++ Quality Work!</h3>
+                    <div class="flex-row">
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                    </div>
+                </div>
+
+                <p>When I broke my 1967 Stratocaster's neck into two pieces during a move, I decided to go to Jimi's Guitar Shop for a repair. After a careful examination, the owner gave me a detailed explanation of the entire rebuild process. I gave him the green light and three weeks later recieved the long-awaited package in the mail. What a fantastic job! My beloved stratocaster looks as good as new and I can't stop playing my favorite riffs!</p>
+
+                <div class="review-profile flex-row">
+                    <img alt="Customer Profile" src="assets/old_man.jpg" />
+                    <h4>- John Michael</h4>
+                </div>
+            </div>
+
+            <div class="container-review flex-column">
+                <div class="header-review">
+                    <h3>Beautiful New Guitar!</h3>
+                    <div class="flex-row">
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                        <p class="review-star full-star"></p>
+                    </div>
+                </div>
+
+                <p>I have always wanted a custom guitar with my own design and specialized components. So after hours of research and planning, I brought my blueprint to Jim and to my surprise he gave a resounding yes! Throughout the entire build process, he also asked for my approval for every decision, making me feel like it was truly my own personal guitar. Thanks for the experience Jim!</p>
+
+                <div class="review-profile flex-row">
+                    <img alt="Customer Profile" src="assets/young_man.jpg" />
+                    <h4>- Timothy Clarence</h4>
+                </div>
+            </div>
+
+            <!-- 
+                svg button design by @karimhossenbux
+                link: https://codepen.io/karimhossenbux/pen/wJWXGw?editors=0100
+            -->
+
+            <svg class="button-slider button-left" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                    <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                </g>
+            </svg>
+
+            <svg class="button-slider button-right" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g>
+                    <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                </g>
+            </svg>
+        </div>
+
+        <div id="main-contact" class="main-container-contact flex-column flex-center initial-slide">
+        
+            <div class="flex-column">
+                <h2>Contact Us</h2>
+
+                <form class="flex-column">
+                    <label>First name:<br />
+                        <input type="text" name="first-name" required>
+                    </label>
+                    <br />
+                    <label>Last name:<br />
+                        <input type="text" name="last-name" required>
+                    </label>
+                    <br />
+                    <label>Email:<br />
+                        <input type="email" name="email" pattern=".+@.+\.com" required>
+                    </label>
+                    <br />
+                    <label>Phone Number: <span class="optional">(optional)</span><br />
+                        <input type="text" name="phone" pattern="\d{3}-\d{3}-\d{4}" placeholder="123-456-7890">
+                    </label>
+                    <br />
+                    <label>Service:<br />
+                        <select name="service">
+                            <option value="" disabled>--Please choose an option--</option>
+                            <option value="set-up">Set-Up</option>
+                            <option value="repair">Repair</option>
+                            <option value="build">Build</option>
+                            <option value="payment">Payment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                    <br />
+                    <label>Your Message:<br />
+                        <textarea placeholder="Please Enter Your Message Here..." nam="message"></textarea>
+                    </label>
+                    <br />
+                    <label>
+                        <input class="flex-row flex-center" type="checkbox" name="permission" required></input>
+                        *By checking this box and submitting your intormation, you are granting us permission to email or call you
+                    </label>
+                    <button title="Submit" class="submit-email" type="submit">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div id="main-location" class="main-container-location flex-row flex-center initial-slide">
+            <div>
+                <div>
+                    <h2>Address</h2>
+                    <p>163 Well Spring Drive</p>
+                    <p>Treebrook, Virginia</p>
+                    <p>34092, USA</p>
+                </div>
+
+                <div>
+                    <h2>Phone</h2>
+                    <p>979-430-8177</p>
+                </div>
+
+                <div>
+                    <h2>Email</h2>
+                    <p>jimiguitarashop@mail.com</p>
+                </div>
+            </div>
+
+            <section>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13003971.009704422!2d-104.6484046806808!3d37.27622614813226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sus!4v1630621382149!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="flex-column">
+
+        <div class="flex-row">
+
+            <div class="flex-column flex-center">
+                <nav class="flex-row flex-center">
+                    <a href="#main-services">Services</a>
+                    <a href="#main-reviews">Reviews</a>
+                    <a href="#main-contact">Contact Us</a>
+                    <a href="#main-location">Location</a>
+                </nav>
+
+                <ul class="flex-row flex-center ul-social">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-youtube"></a></li>
+                </ul>
+            </div>
+
+            <div class="container-about">
+                <h2>About Us</h2>
+                <p>Founded in 1988 by Jim Laughban, Jimi's Guitar Shop has provided its service to the community of Treebrook, Virginia for over thirty years. We take pride in our luthier work, guaranteeing satisfaction for all our customers.</p>
+            </div>
+        </div>
+        
+        <div class="footer-container-privacy flex-column flex-center">
+            <ul class="flex-row flex-center">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <p>Copyright © 2016, Jimi's Guitar Shop. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    </body>
+
+</html>
