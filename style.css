@@ -28,7 +28,6 @@ header {
 }
 
 header nav {
-    height: 5vh; 
     width: 100%; 
     margin: 0; 
     padding: 1.5rem 0; 
@@ -38,7 +37,7 @@ header nav {
 }
 
 header nav a {
-    padding: 0 2.5rem; 
+    margin: 2.5rem 2.5rem; 
     color: #000;
 }
 
@@ -76,8 +75,8 @@ footer nav {
 }
 
 footer nav a {
-    height: 5rem; 
-    margin: 0 2rem; 
+    margin: 0 2rem 2.5rem 2rem; 
+    position: relative; 
 }
 
 footer nav a:hover {
@@ -93,7 +92,8 @@ footer li:hover a {
 }
 
 footer h2 {
-    margin-top: 0; 
+    margin-top: 0;
+    font-size: 2.75rem; 
 }
 
 h1 {
@@ -138,6 +138,25 @@ a {
 
 .hidden {
     display: none !important; 
+}
+
+.slide-button {
+    position: relative;
+}
+
+.slide-button:after {
+    content: ""; 
+    position: absolute;
+    bottom: -10px; 
+    left: 0; 
+    width: 0px; 
+    height: 3px; 
+    background-color: #e05504;
+    transition: all .5s; 
+}
+
+.slide-button:hover:after {
+    width: 100%; 
 }
 
 .initial-hidden {
@@ -460,11 +479,11 @@ a {
 }
 
 .button-left {
-    left: 15rem; 
+    left: 0; 
 }
 
 .button-right {
-    right: 15rem; 
+    right: 0; 
 }
 
 svg.button-slider {
@@ -682,6 +701,7 @@ hr.solid {
     text-align: center; 
     border-radius: 50%; 
     border: 2px solid #000; 
+    transition: all 0.3s; 
 }
 
 .ul-social a {

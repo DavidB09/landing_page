@@ -53,3 +53,30 @@
         if (e.key === 'ArrowLeft') handlePrevSlide();
     });
 })();
+
+(function handleServiceInput() {
+    const serviceElems = document.querySelectorAll('.container-service'); 
+    const formFirstElem = document.querySelector('form label:first-child input');
+    const formElems = document.querySelectorAll('form select option'); 
+
+    serviceElems.forEach(el => {
+        el.addEventListener('click', () => {
+            let attribute = el.getAttribute('data-service'); 
+            formElems.forEach(option => {
+                if (option.value == attribute) {
+                    option.selected = true; 
+                    formFirstElem.scrollIntoView(); 
+                    formFirstElem.focus(); 
+                }
+            })
+        })
+    })
+})(); 
+
+(function runSignupOverlay() {
+    setTimeout(() => {
+        let overlay = document.querySelector('.main-overlay'); 
+        overlay.classList.remove('hidden'); 
+        overlay.querySelector('.button-close').addEventListener('click', () => overlay.classList.add('hidden')); 
+    }, 15000); 
+})(); 
