@@ -18,27 +18,38 @@ body {
     margin: 0;
     padding: 0;
     font-family: Georgia, serif;
+    overflow-x: hidden;
 }
 
 header {
     display: flex; 
     flex-direction: column; 
-    height: 100vh; 
+    min-height: 100vh; 
     width: 100%; 
+    height: 100vh; 
 }
 
 header nav {
+    position: relative; 
     width: 100%; 
+    height: 0; 
+    min-height: 0rem;
     margin: 0; 
-    padding: 1.5rem 0; 
-    font-size: 1.75rem; 
+    overflow: hidden;
+    padding: 0; 
+    font-size: 1.5rem; 
     text-align: center; 
     background-color: #fff; 
+    transition: all .5s; 
 }
 
 header nav a {
-    margin: 2.5rem 2.5rem; 
+    margin: 1rem 1rem; 
     color: #000;
+}
+
+header nav span {
+    display: none;
 }
 
 header nav a:hover {
@@ -65,7 +76,6 @@ footer {
 
 footer div {
     justify-content: center; 
-    align-items: flex-start; 
     padding-top: 2rem; 
 }
 
@@ -97,22 +107,27 @@ footer h2 {
 }
 
 h1 {
-    font-size: 7rem; 
+    margin: 5rem; 
+    font-size: 3rem; 
 }
 
 h2 {
-    font-size: 4rem; 
+    margin: 0; 
+    font-size: 2rem; 
 }
 
 h3 {
-    font-size: 3rem; 
+    font-size: 1.5rem; 
     font-weight: bold;
     margin: 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h4 {
     color: #ff1100;
-    font-size: 2rem;
+    font-size: 1.35rem;
 }
 
 a {
@@ -147,10 +162,10 @@ a {
 .slide-button:after {
     content: ""; 
     position: absolute;
-    bottom: -10px; 
+    bottom: -6px; 
     left: 0; 
     width: 0px; 
-    height: 3px; 
+    height: 2.5px; 
     background-color: #e05504;
     transition: all .5s; 
 }
@@ -171,22 +186,59 @@ a {
 /* Header */
 
 .header-container-logo {
-    height: 12vh; 
+    max-height: 12vh; 
     width: 100%; 
-    margin-top: 2.5rem; 
+    margin: 2rem 0;
     background-color: #fff; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-container-logo div:first-child {
+    margin-right: 5rem; 
 }
 
 .image-logo {
-    height: 8.5rem; 
+    height: 5.5rem; 
     width: auto;
 }
 
 .p-logo {
     margin: 0.5rem 0;  
     font-family: var(--logo-font);
-    font-size: 3rem; 
+    font-size: 2rem; 
     font-weight: bold; 
+}
+
+#menu-toggle {
+    appearance: none;
+    display: none; 
+}
+
+.toggle-bar {
+    display: block;
+    width: 40px; 
+    height: 4px;
+    margin: 3px; 
+    background-color: black; 
+    border-radius: 8px;
+    transition: all 0.4s; 
+}
+
+#menu-toggle + label:hover span {
+    background-color: #e05504;
+}
+
+#menu-toggle:checked + label .top {
+    transform: translateY(8.2px) rotate(45deg);
+} 
+
+#menu-toggle:checked + label .middle {
+    height: 0px; 
+}
+
+#menu-toggle:checked + label .bottom {
+    transform: translateY(-8.2px) rotate(-45deg);
 }
 
 .nav-link {
@@ -203,7 +255,8 @@ a {
 .header-container-welcome {
     height: 100%; 
     width: 100%; 
-    padding-top: 10rem; 
+    padding: 0; 
+    margin: 0; 
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("assets/guitar_background.jpg");
@@ -211,15 +264,18 @@ a {
     background-position: left top;
     background-repeat: no-repeat;
     color: #fff; 
+    text-align: center;
 }
 
 .p-welcome {
-    font-size: 3rem; 
+    font-size: 1.75rem; 
+    margin: 0 5rem; 
 }
 
 .shop-name {
-    font-size: 8rem; 
+    font-size: 3.5rem; 
     font-family: var(--logo-font);
+    transition: all 0.2s; 
 }
 
 /* Source Code for amazing link hover animation is from BROWNERD */
@@ -230,7 +286,7 @@ a {
     padding: 1rem 2rem; 
     color: #e05504; 
     font-family: Georgia, serif;
-    font-size: 3rem; 
+    font-size: 1.75rem; 
     border: 3px solid #e05504; 
     border-radius: 3rem; 
     overflow: hidden; 
@@ -269,25 +325,24 @@ a {
 
 .main-container-services {
     width: 100%; 
-    height: 100vh; 
+    min-height: 75vh; 
+    text-align: center;
+    margin: 5rem 0; 
 }
 
 .image-service {
-    width: 30rem; 
-    margin: 5rem; 
-    margin-bottom: 0.5rem;
-    border: 0.2rem solid black;
-    border-radius: 0.5rem;
+    display: none;
 }
 
 .container-service {
-    width: 30rem; 
-    margin: 5rem; 
+    max-width: 20rem; 
+    width: 100%; 
+    margin: 3.5rem 3.5rem 4.5rem 3.5rem; 
     text-align: center; 
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     border: 0.2rem black solid;
     border-radius: 0.3rem;
-    transition: 0.3s; 
+    transition: 0.3s all; 
 }
 
 .container-service:hover {
@@ -312,7 +367,7 @@ a {
 
 .p-disclaimer {
     margin: 4px; 
-    font-size: 1.35rem; 
+    font-size: 1rem; 
 }
 
 .main-overlay {
@@ -411,18 +466,19 @@ a {
 
 .main-container-reviews {
     position: relative; 
-    height: 75vh; 
-    width: 50%; 
+    min-height: 40vh; 
+    width: 90%; 
     align-items: center; 
     overflow: hidden;
+    margin: 5rem 0; 
 }
 
 .container-review {
     position: absolute; 
-    top: 25rem; 
+    top: 10rem; 
     width: 50%; 
     justify-content: center; 
-    font-size: 15px; 
+    font-size: 12px; 
     line-height: 25px; 
     transition: transform 1s;
 }
@@ -438,6 +494,10 @@ a {
     justify-content: space-between; 
 }
 
+.review-text {
+    display: none;
+}
+
 .review-star {
     position: inline-block; 
     color: #ffd700;
@@ -446,12 +506,12 @@ a {
 
 .full-star:before {
     content: "★"; 
-    font-size: 35px; 
+    font-size: 20px; 
 }
 
 .empty-star:before {
     content: "☆"; 
-    font-size: 35px; 
+    font-size: 20px; 
 }
 
 .review-profile {
@@ -466,8 +526,8 @@ a {
 }
 
 .review-profile img {
-    width: 100px; 
-    height: 100px; 
+    width: 75px; 
+    height: 75px; 
     margin-top: 15px; 
     border-radius: 50%; 
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.35); 
@@ -475,19 +535,19 @@ a {
 
 .button-slider {
     position: absolute; 
-    top: 35rem; 
+    top: 15rem; 
 }
 
 .button-left {
-    left: 0; 
+    left: 1rem; 
 }
 
 .button-right {
-    right: 0; 
+    right: 1rem; 
 }
 
 svg.button-slider {
-    width: 75px;
+    width: 50px;
     height: auto;
     margin: 0 2rem;
     cursor: pointer;
@@ -543,7 +603,7 @@ svg.button-slider:hover .arrow {
 
 .main-container-contact {
     position: relative; 
-    height: 75vh; 
+    min-height: 75vh; 
     width: 100%; 
     background-image: url("assets/shop_background.jpg"); 
     background-size: cover; 
@@ -661,7 +721,7 @@ svg.button-slider:hover .arrow {
 }
 
 .main-container-location {
-    height: 60vh; 
+    min-height: 60vh; 
     width: 100%; 
 }
 
@@ -684,7 +744,7 @@ hr.solid {
 
 /* Footer */
 
-.ul-social ul {
+.ul-social {
     margin: 3rem 0; 
     padding: 0; 
     width: 100%;
@@ -720,6 +780,7 @@ hr.solid {
 
 .footer-container-privacy ul {
     list-style-type: none;
+    padding: 0; 
 }
 
 .footer-container-privacy a {
@@ -729,4 +790,233 @@ hr.solid {
 
 .footer-container-privacy p {
     font-size: 1.5rem; 
+}
+
+/**** MEDIA QUERY ****/
+
+@media (min-width: 600px) {
+    header nav span {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 5rem; 
+    }
+
+    h2 {
+        font-size: 3rem; 
+    }
+
+    h3 {
+        font-size: 2rem; 
+    }
+
+    h4 {
+        font-size: 1.75rem;
+    }
+
+    .flex-column.flex-md-row {
+        flex-direction: row;
+    }
+
+    .p-welcome {
+        font-size: 2.5rem; 
+    }
+
+    .shop-name {
+        font-size: 5.5rem; 
+    }
+
+    .button-explore {
+        padding: 1rem 2rem; 
+        font-size: 2.5rem; 
+    }
+
+    .header-container-welcome {
+        padding-top: 5rem; 
+    }
+
+    .image-service {
+        display: block;
+        max-width: 25rem; 
+        width: 100%;
+        margin: 3.5rem; 
+        margin-bottom: 0.5rem;
+        border: 0.2rem solid black;
+        border-radius: 0.5rem;
+    }
+
+    .container-service {
+        max-width: 25rem; 
+        font-size: 1.55rem;
+    }
+
+    .main-container-reviews {
+        min-height: 75vh; 
+        width: 85%; 
+    }
+
+    .review-text {
+        display: flex;
+    }
+
+    .p-disclaimer {
+        font-size: 1.15rem; 
+    }
+
+    .button-slider {
+        top: 30rem; 
+    }
+
+    .full-star:before {
+        font-size: 25px; 
+    }
+
+    .empty-star:before {
+        font-size: 25px; 
+    }
+
+    .container-review {
+        top: 15rem; 
+        font-size: 13px; 
+    }
+
+    .review-profile img {
+        width: 85px; 
+        height: 85px; 
+    }
+
+    .button-left {
+        left: 2rem; 
+    }
+    
+    .button-right {
+        right: 2rem; 
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    header nav {
+        min-height: 5rem;
+        margin: 1.5rem 0; 
+        font-size: 1.75rem; 
+    }
+
+    header nav a {
+        margin: 2.5rem 2.5rem; 
+    }
+
+    h1 {
+        font-size: 7rem; 
+    }
+
+    h2 {
+        margin: 5rem; 
+        font-size: 4rem; 
+    }
+
+    h3 {
+        font-size: 3rem; 
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    .slide-button:after {
+        bottom: -8px; 
+        height: 3px; 
+    }
+
+    .header-container-logo {
+        max-height: 17vh; 
+        margin-top: 3rem;
+    }
+
+    .header-container-logo div:nth-child(2) {
+        display: none;
+    }
+
+    .image-logo {
+        height: 8.5rem; 
+    }
+
+    .p-logo {
+        font-size: 3rem; 
+    }
+
+    .p-welcome {
+        font-size: 3rem; 
+    }
+
+    .shop-name {
+        font-size: 8rem; 
+    }
+
+    .button-explore {
+        font-size: 3rem; 
+    }
+
+    .header-container-welcome {
+        margin-top: 0rem; 
+        padding: 0; 
+    }
+
+    .image-service {
+        max-width: 30rem; 
+        margin: 5rem; 
+        margin-bottom: 0.5rem;
+        border: 0.2rem solid black;
+        border-radius: 0.5rem;
+    }
+
+    .container-service {
+        max-width: 30rem; 
+        margin: 5rem; 
+        font-size: 1.75rem;
+    }
+
+    .main-container-reviews {
+        width: 75%; 
+    }
+
+    .button-slider {
+        top: 35rem; 
+    }
+
+    .p-disclaimer {
+        font-size: 1.35rem; 
+    }
+
+    .full-star:before {
+        font-size: 35px; 
+    }
+
+    .empty-star:before {
+        font-size: 35px; 
+    }
+
+    svg.button-slider {
+        width: 75px;
+    }
+
+    .container-review {
+        top: 25rem; 
+        font-size: 15px; 
+    }
+
+    .review-profile img {
+        width: 100px; 
+        height: 100px; 
+    }
+
+    .button-left {
+        left: 3rem; 
+    }
+    
+    .button-right {
+        right: 3rem; 
+    }
 }

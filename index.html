@@ -19,15 +19,27 @@
 
     <header>
 
-        <div class="header-container-logo flex-column flex-center">
-            <img class="image-logo" src="assets/guitar_logo.png" alt="Jimi's Guitar logo" />
-            <p class="p-logo"> Jimi's Guitar Shop </p>
+        <div class="header-container-logo flex-row">
+            <div class="flex-column flex-center">
+                <img class="image-logo" src="assets/guitar_logo.png" alt="Jimi's Guitar logo" />
+                <p class="p-logo"> Jimi's Guitar Shop </p>
+            </div>
+
+            <div>
+                <input id="menu-toggle" type="checkbox" />
+
+                <label class="flex-column flex-center" for="menu-toggle">
+                    <span class="toggle-bar top"></span>
+                    <span class="toggle-bar middle"></span>
+                    <span class="toggle-bar bottom"></span>
+                </label>
+            </div>
         </div>
 
-        <nav class="flex-row flex-center">
-            <a class="slide-button" href="#main-services">Services</a>|
-            <a class="slide-button" href="#main-reviews">Reviews</a>|
-            <a class="slide-button" href="#main-contact">Contact Us</a>|
+        <nav class="flex-column flex-md-row flex-center">
+            <a class="slide-button" href="#main-services">Services</a><span>|</span>
+            <a class="slide-button" href="#main-reviews">Reviews</a><span>|</span>
+            <a class="slide-button" href="#main-contact">Contact Us</a><span>|</span>
             <a class="slide-button" href="#main-location">Location</a>
         </nav>
 
@@ -50,7 +62,7 @@
                 <img class="image-service" src="assets/build.jpg" alt="Build picture" />
             </div>
 
-            <div class="flex-row flex-center">
+            <div class="flex-row flex-column flex-md-row">
                 <div class="container-service" data-service="set-up">
                     <div class="heading-service">
                         <h3>Guitar Set-up</h3>
@@ -140,7 +152,7 @@
                     </div>
                 </div>
 
-                <p>My Les Paul hadn't seen a shop in several years so I decided it was time for a set-up. At Jim's all I needed to do was drop it off and pick it up the next day, no hassle whatsover! The luthier throughly cleaned the entire fretboard and even put on a new pair of strings with the truss rod adjustment. </p>
+                <p class="review-text">My Les Paul hadn't seen a shop in several years so I decided it was time for a set-up. At Jim's all I needed to do was drop it off and pick it up the next day, no hassle whatsover! The luthier throughly cleaned the entire fretboard and even put on a new pair of strings with the truss rod adjustment. </p>
 
                 <div class="review-profile flex-row">
                     <img alt="Customer Profile" src="assets/young_woman.jpg" />
@@ -160,7 +172,7 @@
                     </div>
                 </div>
 
-                <p>When I broke my 1967 Stratocaster's neck into two pieces during a move, I decided to go to Jimi's Guitar Shop for a repair. After a careful examination, the owner gave me a detailed explanation of the entire rebuild process. I gave him the green light and three weeks later recieved the long-awaited package in the mail. What a fantastic job! My beloved stratocaster looks as good as new and I can't stop playing my favorite riffs!</p>
+                <p class="review-text">When I broke my 1967 Stratocaster's neck into two pieces during a move, I decided to go to Jimi's Guitar Shop for a repair. After a careful examination, the owner gave me a detailed explanation of the entire rebuild process. I gave him the green light and three weeks later recieved the long-awaited package in the mail. What a fantastic job! My beloved stratocaster looks as good as new and I can't stop playing my favorite riffs!</p>
 
                 <div class="review-profile flex-row">
                     <img alt="Customer Profile" src="assets/old_man.jpg" />
@@ -180,7 +192,7 @@
                     </div>
                 </div>
 
-                <p>I have always wanted a custom guitar with my own design and specialized components. So after hours of research and planning, I brought my blueprint to Jim and to my surprise he gave a resounding yes! Throughout the entire build process, he also asked for my approval for every decision, making me feel like it was truly my own personal guitar. Thanks for the experience Jim!</p>
+                <p class="review-text">I have always wanted a custom guitar with my own design and specialized components. So after hours of research and planning, I brought my blueprint to Jim and to my surprise he gave a resounding yes! Throughout the entire build process, he also asked for my approval for every decision, making me feel like it was truly my own personal guitar. Thanks for the experience Jim!</p>
 
                 <div class="review-profile flex-row">
                     <img alt="Customer Profile" src="assets/young_man.jpg" />
