@@ -616,15 +616,16 @@ svg.button-slider:hover .arrow {
 }
 
 .main-container-contact div {
-    width: 50%; 
-    padding: 5rem 10rem; 
+    width: 75%; 
+    padding: 3rem 6rem; 
+    margin: 5rem; 
     background-color: #fff; 
     border-radius: 1rem; 
 }
 
 .main-container-contact label {
-    margin-top: 2rem; 
-    font-size: 1.5rem; 
+    margin-top: 1.35rem; 
+    font-size: 1.25rem; 
 }
 
 .main-container-contact select {
@@ -639,7 +640,7 @@ svg.button-slider:hover .arrow {
     margin-top: 0.5rem; 
     padding-left: 0.5rem; 
     background-color: #e9e9ed; 
-    font-size: 1.5rem; 
+    font-size: 1.25rem; 
     font-family: inherit; 
     border: 0.1rem solid #adacac;
     border-radius: 0.3rem;
@@ -660,8 +661,11 @@ svg.button-slider:hover .arrow {
 
 .main-container-contact input[type="checkbox"] {
     appearance: none; 
-    height: 2rem; 
-    width: 2rem; 
+    min-height: 20px; 
+    min-width: 20px; 
+    max-height: 20px;
+    min-width: 20px; 
+    width: 20px; 
     margin: 0; 
     margin-right: 1rem; 
     padding: 0; 
@@ -691,7 +695,7 @@ svg.button-slider:hover .arrow {
     margin-top: 0.5rem; 
     padding: 0.5rem; 
     background-color: #f2f3f4; 
-    font-size: 1.5rem; 
+    font-size: 1.25rem; 
     font-family: inherit; 
     border: 0.1rem solid #adacac;
     border-radius: 0.3rem;
@@ -700,7 +704,7 @@ svg.button-slider:hover .arrow {
 }
 
 .main-container-contact textarea:focus {
-    height: 10rem; 
+    height: 7rem; 
     background-color: #fff; 
     box-shadow: 0 0 0.5rem 0.4rem rgb(224, 85, 4, 0.3);
     border: 0.2rem solid #adacac;
@@ -708,9 +712,9 @@ svg.button-slider:hover .arrow {
 }
 
 .main-container-contact button {
-    width: 12rem; 
+    width: 10rem; 
     margin-top: 2rem; 
-    font-size: 1.5rem; 
+    font-size: 1.25rem; 
     font-family: inherit; 
 }
 
@@ -725,12 +729,13 @@ svg.button-slider:hover .arrow {
     width: 100%; 
 }
 
-.main-container-location div {
-    margin-right: 10rem; 
+.main-container-location div div {
+    margin: 3rem 15rem 3rem 0; 
 }
 
 .main-container-location h2 {
     font-size: 3rem; 
+    margin: 2rem 0 1rem 0; 
 }
 
 .main-container-location p {
@@ -893,6 +898,44 @@ hr.solid {
     .button-right {
         right: 2rem; 
     }
+
+    .main-container-contact div {
+        width: 65%; 
+        padding: 4rem 8rem; 
+    }
+
+    .main-container-contact label {
+        margin-top: 1.8rem; 
+        font-size: 1.45rem; 
+    }
+
+    .main-container-contact input {
+        font-size: 1.45rem; 
+    }
+
+    .main-container-contact textarea {
+        font-size: 1.45rem; 
+    }
+
+    .main-container-contact textarea:focus {
+        height: 8.5rem;  
+    }
+
+    .main-container-contact button {
+        font-size: 1.45rem; 
+    }
+
+    .main-container-contact button {
+        width: 12rem; 
+    }
+
+    .main-container-contact input[type="checkbox"] {
+        min-height: 25px; 
+        min-width: 25px; 
+        max-height: 25px;
+        min-width: 25px; 
+        width: 25px; 
+    }
 }
 
 
@@ -1019,4 +1062,31 @@ hr.solid {
     .button-right {
         right: 3rem; 
     }
+
+    .main-container-contact div {
+        width: 50%; 
+        padding: 5rem 10rem; 
+    }
+
+    .main-container-contact label {
+        margin-top: 2rem; 
+        font-size: 1.5rem; 
+    }
+
+    .main-container-contact input {
+        font-size: 1.5rem; 
+    }
+
+    .main-container-contact textarea {
+        font-size: 1.5rem; 
+    }
+
+    .main-container-contact textarea:focus {
+        height: 10rem;  
+    }
+
+    .main-container-contact button {
+        font-size: 1.5rem; 
+    }
+    
 }
