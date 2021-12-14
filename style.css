@@ -336,7 +336,7 @@ a {
 
 .container-service {
     max-width: 20rem; 
-    width: 100%; 
+    width: auto; 
     margin: 3.5rem 3.5rem 4.5rem 3.5rem; 
     text-align: center; 
     font-size: 1.25rem;
@@ -466,8 +466,8 @@ a {
 
 .main-container-reviews {
     position: relative; 
-    min-height: 40vh; 
-    width: 90%; 
+    min-height: 50vh; 
+    height: auto; 
     align-items: center; 
     overflow: hidden;
     margin: 5rem 0; 
@@ -730,16 +730,25 @@ svg.button-slider:hover .arrow {
 }
 
 .main-container-location div div {
-    margin: 3rem 15rem 3rem 0; 
+    margin: 3rem 0; 
+    text-align: center;
 }
 
 .main-container-location h2 {
-    font-size: 3rem; 
+    font-size: 1.75rem; 
     margin: 2rem 0 1rem 0; 
 }
 
+.main-container-location iframe {
+    height: 250px; 
+    width: 90%; 
+    max-width: 300px; 
+    margin-bottom: 2rem; 
+    border: 0;
+}
+
 .main-container-location p {
-    font-size: 1.5rem; 
+    font-size: 1.25rem; 
 }
 
 hr.solid {
@@ -853,6 +862,7 @@ hr.solid {
 
     .container-service {
         max-width: 25rem; 
+        width: 100%; 
         font-size: 1.55rem;
     }
 
@@ -935,6 +945,27 @@ hr.solid {
         max-height: 25px;
         min-width: 25px; 
         width: 25px; 
+    }
+
+    .main-container-location h2 {
+        font-size: 2.15rem; 
+    }
+
+    .main-container-location p {
+        font-size: 1.35rem; 
+    }
+
+    .main-container-location div div {
+        margin: 3rem 3rem 3rem 4rem; 
+        text-align: start;
+    }
+
+    .main-container-location iframe {
+        height: 400px; 
+        width: 100%; 
+        max-width: 450px; 
+        margin: 4rem; 
+        border: 0;
     }
 }
 
@@ -1088,5 +1119,20 @@ hr.solid {
     .main-container-contact button {
         font-size: 1.5rem; 
     }
-    
+
+    .main-container-location h2 {
+        font-size: 3rem; 
+    }
+
+    .main-container-location p {
+        font-size: 1.5rem; 
+    }
+
+    .main-container-location iframe {
+        height: 450px; 
+        width: 100%; 
+        max-width: 600px; 
+        margin: 4rem; 
+        border: 0;
+    }
 }
