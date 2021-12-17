@@ -80,7 +80,7 @@ footer div {
 }
 
 footer nav {
-    font-size: 2rem; 
+    font-size: 1.5rem; 
     width: 100%; 
 }
 
@@ -102,7 +102,7 @@ footer li:hover a {
 }
 
 footer h2 {
-    margin-top: 0;
+    margin: 0 0 2rem 0;
     font-size: 2.75rem; 
 }
 
@@ -466,21 +466,26 @@ a {
 
 .main-container-reviews {
     position: relative; 
-    min-height: 50vh; 
-    height: auto; 
     align-items: center; 
-    overflow: hidden;
+    justify-content: center;
     margin: 5rem 0; 
 }
 
+.main-container-reviews div:first-child {
+    position: relative;
+}
+
 .container-review {
-    position: absolute; 
-    top: 10rem; 
+    position: absolute;
     width: 50%; 
-    justify-content: center; 
+    margin: 5rem;
     font-size: 12px; 
     line-height: 25px; 
-    transition: transform 1s;
+    transition: all 1s;
+}
+
+.main-container-reviews h2 {
+    margin: 1rem; 
 }
 
 .container-review h3 {
@@ -867,7 +872,6 @@ hr.solid {
     }
 
     .main-container-reviews {
-        min-height: 75vh; 
         width: 85%; 
     }
 
@@ -892,7 +896,6 @@ hr.solid {
     }
 
     .container-review {
-        top: 15rem; 
         font-size: 13px; 
     }
 
@@ -980,6 +983,10 @@ hr.solid {
 
     header nav a {
         margin: 2.5rem 2.5rem; 
+    }
+
+    footer nav {
+        font-size: 1.75rem; 
     }
 
     h1 {
@@ -1077,7 +1084,6 @@ hr.solid {
     }
 
     .container-review {
-        top: 25rem; 
         font-size: 15px; 
     }
 

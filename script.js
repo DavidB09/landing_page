@@ -25,7 +25,9 @@
 
     const goToSlide = (slide) => {
         slides.forEach(
-            (s, i) => (s.style.transform = `translateX(${1500 * (i - slide)}px)`)
+            (s, i) => {
+                s.style.transform = `translateX(${1500 * (i - slide)}px)`; 
+            }
         );
     }
 
