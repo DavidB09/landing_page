@@ -79,6 +79,11 @@ footer div {
     padding-top: 2rem; 
 }
 
+footer div div {
+    align-items: center;
+    justify-content: start;
+}
+
 footer nav {
     font-size: 1.5rem; 
     width: 100%; 
@@ -469,6 +474,7 @@ a {
     align-items: center; 
     justify-content: center;
     margin: 5rem 0; 
+    overflow-x: hidden; 
 }
 
 .main-container-reviews div:first-child {
@@ -818,6 +824,10 @@ hr.solid {
         display: flex;
     }
 
+    footer nav a {
+        margin: 0 1rem 2.5rem 1rem; 
+    }
+
     h1 {
         font-size: 5rem; 
     }
@@ -873,6 +883,7 @@ hr.solid {
 
     .main-container-reviews {
         width: 85%; 
+        margin-bottom: 20rem; 
     }
 
     .review-text {
@@ -970,6 +981,10 @@ hr.solid {
         margin: 4rem; 
         border: 0;
     }
+
+    .ul-social li {
+        margin: 0 1.5rem 0 1.5rem;  
+    }
 }
 
 
@@ -987,6 +1002,10 @@ hr.solid {
 
     footer nav {
         font-size: 1.75rem; 
+    }
+
+    footer nav a {
+        margin: 0 2rem 2.5rem 2rem; 
     }
 
     h1 {
@@ -1140,5 +1159,9 @@ hr.solid {
         max-width: 600px; 
         margin: 4rem; 
         border: 0;
+    }
+
+    .ul-social li {
+        margin: 0 2.5rem; 
     }
 }
