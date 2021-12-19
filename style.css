@@ -75,8 +75,8 @@ footer {
 }
 
 footer div {
-    justify-content: center; 
-    padding-top: 2rem; 
+    justify-content: center;
+    padding-top: 1rem; 
 }
 
 footer div div {
@@ -86,11 +86,11 @@ footer div div {
 
 footer nav {
     font-size: 1.5rem; 
-    width: 100%; 
+    width: auto; 
 }
 
 footer nav a {
-    margin: 0 2rem 2.5rem 2rem; 
+    margin: 1rem; 
     position: relative; 
 }
 
@@ -391,20 +391,25 @@ a {
     background-color: #fff; 
     border: 3px solid #000; 
     outline: 10px solid #fff;
+    margin: 5rem; 
+}
+
+.main-container-signup h2 {
+    margin: 2rem; 
 }
 
 .main-container-signup svg {
     position: absolute; 
-    top: -15%; 
-    left: -8%;  
+    top: -80px; 
+    left: -50px;  
 }
 
 .button-close {
     position: absolute;
     top: 15px; 
     right: 15px; 
-    height: 4rem; 
-    width: 4rem; 
+    height: 3rem; 
+    width: 3rem; 
 }
 
 .button-close:hover {
@@ -412,14 +417,14 @@ a {
 }
 
 .p-signup {
-    font-size: 2rem; 
+    font-size: 1.25rem; 
 }
 
 .input-email {
-    height: 3.5rem; 
+    height: 2.5rem; 
     margin-right: 10px;
     padding: 5px; 
-    font-size: 1.75rem; 
+    font-size: 1.2rem; 
     box-sizing: border-box;
 }
 
@@ -433,11 +438,12 @@ a {
 
 .submit-email {
     position: relative; 
-    height: 3.5rem; 
+    height: 2.5rem; 
     width: 10rem; 
     padding: 5px; 
+    margin-top: 1rem; 
     background-color: #f76c1b; 
-    font-size: 1.75rem; 
+    font-size: 1.2rem; 
     border: 0.5px #000 solid; 
     box-sizing: border-box; 
     overflow: hidden;
@@ -770,9 +776,12 @@ hr.solid {
 /* Footer */
 
 .ul-social {
+    justify-content: space-around;
+    align-items: center;
     margin: 3rem 0; 
     padding: 0; 
     width: 100%;
+    max-width: 35rem;
 }
 
 .ul-social li {
@@ -782,7 +791,7 @@ hr.solid {
     box-sizing: border-box; 
     width: 5rem; 
     height: 5rem; 
-    margin: 0 2.5rem; 
+    padding: 1rem; 
     text-align: center; 
     border-radius: 50%; 
     border: 2px solid #000; 
@@ -815,6 +824,7 @@ hr.solid {
 
 .footer-container-privacy p {
     font-size: 1.05rem; 
+    margin: 1rem; 
 }
 
 /**** MEDIA QUERY ****/
@@ -831,6 +841,10 @@ hr.solid {
     footer h2 {
         align-self: flex-start;
         font-size: 2.35rem; 
+    }
+
+    footer div {
+        padding-top: 2rem; 
     }
 
     h1 {
@@ -855,6 +869,25 @@ hr.solid {
 
     .p-welcome {
         font-size: 2.5rem; 
+    }
+
+    .main-container-signup h2 {
+        margin: 2.5rem; 
+    }
+
+    .input-email {
+        height: 3rem; 
+        font-size: 1.5rem; 
+    }
+
+    .submit-email {
+        height: 3rem; 
+        font-size: 1.5rem; 
+    }
+
+    .button-close {
+        height: 4rem; 
+        width: 4rem; 
     }
 
     .shop-name {
@@ -928,6 +961,10 @@ hr.solid {
         right: 2rem; 
     }
 
+    .p-signup {
+        font-size: 1.75rem; 
+    }
+
     .main-container-contact div {
         width: 65%; 
         padding: 4rem 8rem; 
@@ -987,6 +1024,10 @@ hr.solid {
         border: 0;
     }
 
+    .ul-social {
+        max-width: none;
+    }
+
     .ul-social li {
         margin: 0 2rem;  
     }
@@ -1004,6 +1045,10 @@ hr.solid {
     
     .footer-container-privacy p {
         font-size: 1.2rem; 
+    }
+
+    .ul-social {
+        justify-content: center;
     }
 }
 
@@ -1047,6 +1092,24 @@ hr.solid {
 
     h4 {
         font-size: 2rem;
+    }
+
+    .main-container-signup h2 {
+        margin: 3.5rem; 
+    }
+
+    .input-email {
+        height: 3.5rem; 
+        font-size: 1.75rem; 
+    }
+
+    .submit-email {
+        height: 3.5rem; 
+        font-size: 1.75rem; 
+    }
+
+    .p-signup {
+        font-size: 2rem; 
     }
 
     .slide-button:after {

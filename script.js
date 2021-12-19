@@ -80,7 +80,7 @@
         let overlay = document.querySelector('.main-overlay'); 
         overlay.classList.remove('hidden'); 
         overlay.querySelector('.button-close').addEventListener('click', () => overlay.classList.add('hidden')); 
-    }, 15000); 
+    }, 0); 
 })(); 
 
 (function handleDropdownMenu() {
