@@ -8,7 +8,9 @@ html {
     --logo-font: 'Yesteryear', cursive; 
 }
 
-/**** ELEMENT ****/
+/**** GENERAL ****/
+
+/* Elements */
 
 body {
     display: flex; 
@@ -19,43 +21,6 @@ body {
     padding: 0;
     font-family: Georgia, serif;
     overflow-x: hidden;
-}
-
-header {
-    display: flex; 
-    flex-direction: column; 
-    min-height: 100vh; 
-    width: 100%; 
-    height: 100vh; 
-}
-
-header nav {
-    position: relative; 
-    width: 100%; 
-    height: 0; 
-    min-height: 0rem;
-    margin: 0; 
-    overflow: hidden;
-    padding: 0; 
-    font-size: 1.5rem; 
-    text-align: center; 
-    background-color: #fff; 
-    transition: all .5s; 
-}
-
-header nav a {
-    margin: 1rem 1rem; 
-    color: #000;
-}
-
-header nav span {
-    display: none;
-}
-
-header nav a:hover {
-    color: #e05504; 
-    cursor: pointer;
-    transition: color 0.2s;
 }
 
 main {
@@ -139,8 +104,6 @@ a {
     text-decoration: none; 
 }
 
-/**** CLASS ****/
-
 .flex-row {
     display: flex; 
     flex-direction: row; 
@@ -188,15 +151,54 @@ a {
     transition: transform 1s, opacity 1s;
 }
 
-/* Header */
+/**** HEADER ****/
+
+/* Elements */
+
+header {
+    display: flex; 
+    flex-direction: column; 
+    width: 100%; 
+    height: 100vh; 
+    min-height: 100vh; 
+}
+
+header nav {
+    position: relative; 
+    width: 100%; 
+    height: 0; 
+    min-height: 0rem;
+    margin: 0; 
+    padding: 0; 
+    font-size: 1.5rem; 
+    text-align: center; 
+    background-color: #fff; 
+    transition: all .5s; 
+    overflow: hidden;
+}
+
+header nav a {
+    margin: 1rem 1rem; 
+    color: #000;
+}
+
+header nav span {
+    display: none;
+}
+
+header nav a:hover {
+    color: #e05504; 
+    transition: color 0.2s;
+    cursor: pointer;
+}
 
 .header-container-logo {
-    max-height: 12vh; 
-    width: 100%; 
-    margin: 2rem 0;
-    background-color: #fff; 
     justify-content: space-around;
     align-items: center;
+    width: 100%; 
+    max-height: 12vh; 
+    margin: 2rem 0;
+    background-color: #fff; 
 }
 
 .header-container-logo div:first-child {
@@ -204,8 +206,8 @@ a {
 }
 
 .image-logo {
-    height: 5.5rem; 
     width: auto;
+    height: 5.5rem; 
 }
 
 .p-logo {
@@ -830,6 +832,11 @@ hr.solid {
 /**** MEDIA QUERY ****/
 
 @media (min-width: 600px) {
+
+    header nav {
+        font-size: 1.65rem; 
+    }
+
     header nav span {
         display: flex;
     }
