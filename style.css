@@ -23,15 +23,6 @@ body {
     overflow-x: hidden;
 }
 
-main {
-    position: relative; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    width: 100%; 
-}
-
 footer {
     height: auto; 
     width: 100%; 
@@ -170,9 +161,9 @@ header nav {
     min-height: 0rem;
     margin: 0; 
     padding: 0; 
+    background-color: #fff; 
     font-size: 1.5rem; 
     text-align: center; 
-    background-color: #fff; 
     transition: all .5s; 
     overflow: hidden;
 }
@@ -188,9 +179,11 @@ header nav span {
 
 header nav a:hover {
     color: #e05504; 
-    transition: color 0.2s;
     cursor: pointer;
+    transition: color 0.2s;
 }
+
+/* Classes */
 
 .header-container-logo {
     justify-content: space-around;
@@ -217,11 +210,6 @@ header nav a:hover {
     font-weight: bold; 
 }
 
-#menu-toggle {
-    appearance: none;
-    display: none; 
-}
-
 .toggle-bar {
     display: block;
     width: 40px; 
@@ -230,22 +218,6 @@ header nav a:hover {
     background-color: black; 
     border-radius: 8px;
     transition: all 0.4s; 
-}
-
-#menu-toggle + label:hover span {
-    background-color: #e05504;
-}
-
-#menu-toggle:checked + label .top {
-    transform: translateY(8.2px) rotate(45deg);
-} 
-
-#menu-toggle:checked + label .middle {
-    height: 0px; 
-}
-
-#menu-toggle:checked + label .bottom {
-    transform: translateY(-8.2px) rotate(-45deg);
 }
 
 .nav-link {
@@ -296,9 +268,9 @@ header nav a:hover {
     font-size: 1.75rem; 
     border: 3px solid #e05504; 
     border-radius: 3rem; 
-    overflow: hidden; 
     transition: .2s transform ease-in-out; 
     will-change: transform; 
+    overflow: hidden; 
     z-index: 0; 
 }
 
@@ -328,7 +300,41 @@ header nav a:hover {
     transform: translate(0, 0); 
 }
 
-/* Main */
+/* IDs */
+
+#menu-toggle {
+    appearance: none;
+    display: none; 
+}
+
+#menu-toggle + label:hover span {
+    background-color: #e05504;
+}
+
+#menu-toggle:checked + label .top {
+    transform: translateY(8.2px) rotate(45deg);
+} 
+
+#menu-toggle:checked + label .middle {
+    height: 0px; 
+}
+
+#menu-toggle:checked + label .bottom {
+    transform: translateY(-8.2px) rotate(-45deg);
+}
+
+/**** MAIN ****/
+
+/* Elements */
+
+main {
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+}
 
 .main-container-services {
     width: 100%; 
