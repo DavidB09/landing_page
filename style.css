@@ -23,50 +23,6 @@ body {
     overflow-x: hidden;
 }
 
-footer {
-    height: auto; 
-    width: 100%; 
-    background-color: #000; 
-    color: #fff; 
-}
-
-footer div {
-    justify-content: center;
-    padding-top: 1rem; 
-}
-
-footer div div {
-    align-items: center;
-    justify-content: start;
-}
-
-footer nav {
-    font-size: 1.5rem; 
-    width: auto; 
-}
-
-footer nav a {
-    margin: 1rem; 
-    position: relative; 
-}
-
-footer nav a:hover {
-    color: #fa6f1e; 
-}
-
-footer a {
-    color: #fff; 
-}
-
-footer li:hover a {
-    color: #fa6f1e; 
-}
-
-footer h2 {
-    margin: 0 0 2rem 0;
-    font-size: 2rem; 
-}
-
 h1 {
     margin: 5rem; 
     font-size: 3rem; 
@@ -78,12 +34,12 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem; 
-    font-weight: bold;
-    margin: 1rem; 
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1rem; 
+    font-size: 1.5rem; 
+    font-weight: bold;
 }
 
 h4 {
@@ -94,6 +50,8 @@ h4 {
 a {
     text-decoration: none; 
 }
+
+/* Classes */
 
 .flex-row {
     display: flex; 
@@ -142,6 +100,115 @@ a {
     transition: transform 1s, opacity 1s;
 }
 
+/* Source Code for amazing button hover animation is from David Conner */
+/* Link: https://codepen.io/davidicus/pen/emgQKJ */
+
+.submit-email {
+    position: relative; 
+    width: 10rem; 
+    height: 2.5rem; 
+    margin-top: 1rem; 
+    padding: 5px; 
+    background-color: #f76c1b; 
+    font-size: 1.2rem; 
+    border: 0.5px #000 solid; 
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+
+.submit-email::after {
+    content: "";
+    position: absolute;
+    top: -50px; 
+    left: -110%; 
+    width: 50px;
+    height: 155px;
+    background-color: #fff;
+    opacity: .2;
+    transform: rotate(35deg);
+    transition: all 1.75s cubic-bezier(0.20, 1, 0.23, 1);
+}
+
+.submit-email:hover {
+    cursor: pointer;
+}
+
+.submit-email:hover::after {
+    left: 110%; 
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.p-disclaimer {
+    margin: 4px; 
+    font-size: 1rem; 
+}
+
+/* Media Query */
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 5rem; 
+    }
+
+    h2 {
+        font-size: 3rem; 
+    }
+
+    h3 {
+        font-size: 2rem; 
+    }
+
+    h4 {
+        font-size: 1.75rem;
+    }
+
+    .flex-column.flex-md-row {
+        flex-direction: row;
+    }
+
+    .submit-email {
+        height: 3rem; 
+        font-size: 1.5rem; 
+    }
+
+    .p-disclaimer {
+        font-size: 1.15rem; 
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 7rem; 
+    }
+
+    h2 {
+        margin: 5rem; 
+        font-size: 4rem; 
+    }
+
+    h3 {
+        font-size: 3rem; 
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    .slide-button:after {
+        bottom: -8px; 
+        height: 3px; 
+    }
+
+    .submit-email {
+        height: 3.5rem; 
+        font-size: 1.75rem; 
+    }
+
+    .p-disclaimer {
+        font-size: 1.35rem; 
+    }
+}
+
 /**** HEADER ****/
 
 /* Elements */
@@ -186,8 +253,8 @@ header nav a:hover {
 /* Classes */
 
 .header-container-logo {
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     width: 100%; 
     max-height: 12vh; 
     margin: 2rem 0;
@@ -232,23 +299,23 @@ header nav a:hover {
 }
 
 .header-container-welcome {
-    height: 100%; 
     width: 100%; 
-    padding: 0; 
+    height: 100%; 
     margin: 0; 
+    padding: 0; 
+    color: #fff; 
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("assets/guitar_background.jpg");
     background-size: cover; 
     background-position: left top;
     background-repeat: no-repeat;
-    color: #fff; 
     text-align: center;
 }
 
 .p-welcome {
-    font-size: 1.75rem; 
     margin: 0 5rem; 
+    font-size: 1.75rem; 
 }
 
 .shop-name {
@@ -277,10 +344,10 @@ header nav a:hover {
 .button-explore::after {
     content: ''; 
     position: absolute; 
-    left: 0; 
     top: 0; 
-    height: 100%; 
+    left: 0; 
     width: 100%; 
+    height: 100%; 
     background-color: #e05504; 
     border-radius: 3rem; 
     transform: translate(-100%, 0) rotate(10deg); 
@@ -323,6 +390,81 @@ header nav a:hover {
     transform: translateY(-8.2px) rotate(-45deg);
 }
 
+/* Media Query */
+
+@media (min-width: 600px) {
+    header nav {
+        font-size: 1.65rem; 
+    }
+
+    header nav span {
+        display: flex;
+    }
+
+    .header-container-welcome {
+        padding-top: 5rem; 
+    }
+
+    .p-welcome {
+        font-size: 2.5rem; 
+    }
+
+    .shop-name {
+        font-size: 5.5rem; 
+    }
+
+    .button-explore {
+        padding: 1rem 2rem; 
+        font-size: 2.5rem; 
+    }
+}
+
+@media (min-width: 1200px) {
+    header nav {
+        min-height: 5rem;
+        margin: 1.5rem 0; 
+        font-size: 1.75rem; 
+    }
+
+    header nav a {
+        margin: 2.5rem 2.5rem; 
+    }
+
+    .header-container-logo {
+        max-height: 17vh; 
+        margin-top: 3rem;
+    }
+
+    .header-container-logo div:nth-child(2) {
+        display: none;
+    }
+
+    .image-logo {
+        height: 8.5rem; 
+    }
+
+    .p-logo {
+        font-size: 3rem; 
+    }
+
+    .header-container-welcome {
+        margin-top: 0rem; 
+        padding: 0; 
+    }
+
+    .p-welcome {
+        font-size: 3rem; 
+    }
+
+    .shop-name {
+        font-size: 8rem; 
+    }
+
+    .button-explore {
+        font-size: 3rem; 
+    }
+}
+
 /**** MAIN ****/
 
 /* Elements */
@@ -331,57 +473,12 @@ main {
     position: relative; 
     display: flex; 
     flex-direction: column; 
-    justify-content: center; 
     align-items: center; 
+    justify-content: center; 
     width: 100%; 
 }
 
-.main-container-services {
-    width: 100%; 
-    min-height: 75vh; 
-    text-align: center;
-    margin: 5rem 0; 
-}
-
-.image-service {
-    display: none;
-}
-
-.container-service {
-    max-width: 20rem; 
-    width: auto; 
-    margin: 3.5rem 3.5rem 4.5rem 3.5rem; 
-    text-align: center; 
-    font-size: 1.25rem;
-    border: 0.2rem black solid;
-    border-radius: 0.3rem;
-    transition: 0.3s all; 
-}
-
-.container-service:hover {
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.10), 0 10px 15px rgba(0, 0, 0, 0.15); 
-    transform: scale(1.05); 
-}
-
-.heading-service {
-    padding: 1rem;
-    background-color: #fff0e6;
-    border-bottom: 0.2rem black solid;
-}
-
-.description-service {
-    list-style: none; 
-    padding: 0; 
-}
-
-.description-service li {
-    margin: 2rem; 
-}
-
-.p-disclaimer {
-    margin: 4px; 
-    font-size: 1rem; 
-}
+/* Overlay */
 
 .main-overlay {
     position: fixed;
@@ -395,11 +492,11 @@ main {
 
 .main-container-signup {
     position: relative; 
+    margin: 5rem; 
     padding: 10rem 5rem; 
     background-color: #fff; 
     border: 3px solid #000; 
     outline: 10px solid #fff;
-    margin: 5rem; 
 }
 
 .main-container-signup h2 {
@@ -416,8 +513,8 @@ main {
     position: absolute;
     top: 15px; 
     right: 15px; 
-    height: 3rem; 
     width: 3rem; 
+    height: 3rem; 
 }
 
 .button-close:hover {
@@ -441,47 +538,55 @@ main {
     box-shadow: 0 0 0.5rem 0.4rem rgba(224, 85, 4, 0.3); 
 }
 
-/* Source Code for amazing button hover animation is from David Conner */
-/* Link: https://codepen.io/davidicus/pen/emgQKJ */
-
-.submit-email {
-    position: relative; 
-    height: 2.5rem; 
-    width: 10rem; 
-    padding: 5px; 
-    margin-top: 1rem; 
-    background-color: #f76c1b; 
-    font-size: 1.2rem; 
-    border: 0.5px #000 solid; 
-    box-sizing: border-box; 
-    overflow: hidden;
-}
-
-.submit-email::after {
-    content: "";
-    position: absolute;
-    left: -110%; 
-    top: -50px; 
-    height: 155px;
-    width: 50px;
-    background: #fff;
-    opacity: .2;
-    transform: rotate(35deg);
-    transition: all 1.75s cubic-bezier(0.20, 1, 0.23, 1);
-}
-
-.submit-email:hover {
-    cursor: pointer;
-}
-
-.submit-email:hover::after {
-    left: 110%; 
-    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
 .container-signup-disclaimer {
     margin-top: 2rem; 
 }
+
+/* Services */
+
+.main-container-services {
+    width: 100%; 
+    min-height: 75vh; 
+    margin: 5rem 0; 
+    text-align: center;
+}
+
+.image-service {
+    display: none;
+}
+
+.container-service {
+    max-width: 20rem; 
+    width: auto; 
+    margin: 3.5rem 3.5rem 4.5rem 3.5rem; 
+    font-size: 1.25rem;
+    text-align: center; 
+    border: 0.2rem black solid;
+    border-radius: 0.3rem;
+    transition: 0.3s all; 
+}
+
+.container-service:hover {
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.10), 0 10px 15px rgba(0, 0, 0, 0.15); 
+    transform: scale(1.05); 
+}
+
+.heading-service {
+    padding: 1rem;
+    background-color: #fff0e6;
+    border-bottom: 0.2rem black solid;
+}
+
+.description-service {
+    padding: 0; 
+    list-style: none; 
+}
+
+.description-service li {
+    margin: 2rem; 
+}
+
+/* Reviews */
 
 .main-container-reviews {
     position: relative; 
@@ -509,9 +614,9 @@ main {
 }
 
 .container-review h3 {
+    margin-left: 0; 
     color: #e05504; 
     font-style: italic; 
-    margin-left: 0; 
 }
 
 .header-review {
@@ -525,8 +630,8 @@ main {
 
 .review-star {
     position: inline-block; 
-    color: #ffd700;
     margin-right: 0; 
+    color: #ffd700;
 }
 
 .full-star:before {
@@ -607,8 +712,8 @@ svg.button-slider:hover .arrow {
     }
 
     100% {
-        transform: translateX(1rem);
         opacity: 0;
+        transform: translateX(1rem);
     }
 }
 
@@ -626,10 +731,12 @@ svg.button-slider:hover .arrow {
     }
 }
 
+/* Contact Information */
+
 .main-container-contact {
     position: relative; 
-    min-height: 75vh; 
     width: 100%; 
+    min-height: 75vh; 
     background-image: url("assets/shop_background.jpg"); 
     background-size: cover; 
     background-position: left top;
@@ -642,8 +749,8 @@ svg.button-slider:hover .arrow {
 
 .main-container-contact div {
     width: 75%; 
-    padding: 3rem 6rem; 
     margin: 5rem; 
+    padding: 3rem 6rem; 
     background-color: #fff; 
     border-radius: 1rem; 
 }
@@ -660,8 +767,8 @@ svg.button-slider:hover .arrow {
 
 .main-container-contact input {
     box-sizing: border-box; 
-    height: 3.1rem; 
     width: 100%; 
+    height: 3.1rem; 
     margin-top: 0.5rem; 
     padding-left: 0.5rem; 
     background-color: #e9e9ed; 
@@ -686,11 +793,10 @@ svg.button-slider:hover .arrow {
 
 .main-container-contact input[type="checkbox"] {
     appearance: none; 
+    min-width: 20px; 
+    max-width: 20px; 
     min-height: 20px; 
-    min-width: 20px; 
     max-height: 20px;
-    min-width: 20px; 
-    width: 20px; 
     margin: 0; 
     margin-right: 1rem; 
     padding: 0; 
@@ -749,9 +855,11 @@ svg.button-slider:hover .arrow {
     font-style: italic; 
 }
 
+/* Location */
+
 .main-container-location {
-    min-height: 60vh; 
     width: 100%; 
+    min-height: 60vh; 
 }
 
 .main-container-location div div {
@@ -760,14 +868,14 @@ svg.button-slider:hover .arrow {
 }
 
 .main-container-location h2 {
-    font-size: 1.75rem; 
     margin: 2rem 0 1rem 0; 
+    font-size: 1.75rem; 
 }
 
 .main-container-location iframe {
-    height: 250px; 
     width: 90%; 
     max-width: 300px; 
+    height: 250px; 
     margin-bottom: 2rem; 
     border: 0;
 }
@@ -776,126 +884,11 @@ svg.button-slider:hover .arrow {
     font-size: 1.25rem; 
 }
 
-hr.solid {
-    width: 100%; 
-    border-top: 3px solid black;
-}
-
-/* Footer */
-
-.ul-social {
-    justify-content: space-around;
-    align-items: center;
-    margin: 3rem 0; 
-    padding: 0; 
-    width: 100%;
-    max-width: 35rem;
-}
-
-.ul-social li {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    box-sizing: border-box; 
-    width: 5rem; 
-    height: 5rem; 
-    padding: 1rem; 
-    text-align: center; 
-    border-radius: 50%; 
-    border: 2px solid #000; 
-    transition: all 0.3s; 
-}
-
-.ul-social a {
-    font-size: 2rem; 
-}
-
-.ul-social li:hover {
-    border: 2px solid #fa6f1e; 
-}
-
-.container-about {
-    width: auto; 
-    margin: 0 3rem; 
-    font-size: 1.15rem; 
-}
-
-.footer-container-privacy ul {
-    list-style-type: none;
-    padding: 0; 
-}
-
-.footer-container-privacy a {
-    font-size: 1.05rem; 
-    margin: 0.5rem; 
-}
-
-.footer-container-privacy p {
-    font-size: 1.05rem; 
-    margin: 1rem; 
-}
-
-/**** MEDIA QUERY ****/
+/* Media Query */
 
 @media (min-width: 600px) {
-
-    header nav {
-        font-size: 1.65rem; 
-    }
-
-    header nav span {
-        display: flex;
-    }
-
-    footer nav a {
-        margin: 0 1rem 2.5rem 1rem; 
-    }
-
-    footer h2 {
-        align-self: flex-start;
-        font-size: 2.35rem; 
-    }
-
-    footer div {
-        padding-top: 2rem; 
-    }
-
-    h1 {
-        font-size: 5rem; 
-    }
-
-    h2 {
-        font-size: 3rem; 
-    }
-
-    h3 {
-        font-size: 2rem; 
-    }
-
-    h4 {
-        font-size: 1.75rem;
-    }
-
-    .flex-column.flex-md-row {
-        flex-direction: row;
-    }
-
-    .p-welcome {
-        font-size: 2.5rem; 
-    }
-
     .main-container-signup h2 {
         margin: 2.5rem; 
-    }
-
-    .input-email {
-        height: 3rem; 
-        font-size: 1.5rem; 
-    }
-
-    .submit-email {
-        height: 3rem; 
-        font-size: 1.5rem; 
     }
 
     .button-close {
@@ -903,23 +896,19 @@ hr.solid {
         width: 4rem; 
     }
 
-    .shop-name {
-        font-size: 5.5rem; 
+    .p-signup {
+        font-size: 1.75rem; 
     }
 
-    .button-explore {
-        padding: 1rem 2rem; 
-        font-size: 2.5rem; 
-    }
-
-    .header-container-welcome {
-        padding-top: 5rem; 
+    .input-email {
+        height: 3rem; 
+        font-size: 1.5rem; 
     }
 
     .image-service {
         display: block;
-        max-width: 25rem; 
         width: 100%;
+        max-width: 25rem; 
         margin: 3.5rem; 
         margin-bottom: 0.5rem;
         border: 0.2rem solid black;
@@ -927,8 +916,8 @@ hr.solid {
     }
 
     .container-service {
-        max-width: 25rem; 
         width: 100%; 
+        max-width: 25rem; 
         font-size: 1.55rem;
     }
 
@@ -937,16 +926,12 @@ hr.solid {
         margin-bottom: 20rem; 
     }
 
+    .container-review {
+        font-size: 13px; 
+    }
+
     .review-text {
         display: flex;
-    }
-
-    .p-disclaimer {
-        font-size: 1.15rem; 
-    }
-
-    .button-slider {
-        top: 30rem; 
     }
 
     .full-star:before {
@@ -956,14 +941,14 @@ hr.solid {
     .empty-star:before {
         font-size: 25px; 
     }
-
-    .container-review {
-        font-size: 13px; 
-    }
-
+    
     .review-profile img {
         width: 85px; 
         height: 85px; 
+    }
+
+    .button-slider {
+        top: 30rem; 
     }
 
     .button-left {
@@ -972,10 +957,6 @@ hr.solid {
     
     .button-right {
         right: 2rem; 
-    }
-
-    .p-signup {
-        font-size: 1.75rem; 
     }
 
     .main-container-contact div {
@@ -992,6 +973,14 @@ hr.solid {
         font-size: 1.45rem; 
     }
 
+    .main-container-contact input[type="checkbox"] {
+        min-height: 25px; 
+        min-width: 25px; 
+        max-height: 25px;
+        min-width: 25px; 
+        width: 25px; 
+    }
+
     .main-container-contact textarea {
         font-size: 1.45rem; 
     }
@@ -1001,27 +990,8 @@ hr.solid {
     }
 
     .main-container-contact button {
-        font-size: 1.45rem; 
-    }
-
-    .main-container-contact button {
         width: 12rem; 
-    }
-
-    .main-container-contact input[type="checkbox"] {
-        min-height: 25px; 
-        min-width: 25px; 
-        max-height: 25px;
-        min-width: 25px; 
-        width: 25px; 
-    }
-
-    .main-container-location h2 {
-        font-size: 2.15rem; 
-    }
-
-    .main-container-location p {
-        font-size: 1.35rem; 
+        font-size: 1.45rem; 
     }
 
     .main-container-location div div {
@@ -1029,139 +999,35 @@ hr.solid {
         text-align: start;
     }
 
+    .main-container-location h2 {
+        font-size: 2.15rem; 
+    }
+
     .main-container-location iframe {
-        height: 400px; 
         width: 100%; 
         max-width: 450px; 
+        height: 400px; 
         margin: 4rem; 
         border: 0;
     }
 
-    .ul-social {
-        max-width: none;
-    }
-
-    .ul-social li {
-        margin: 0 2rem;  
-    }
-
-    .container-about {
-        width: 50rem; 
-        margin-left: 3.5rem; 
-        margin-right: 2rem; 
+    .main-container-location p {
         font-size: 1.35rem; 
-    }
-
-    .footer-container-privacy a {
-        font-size: 1.2rem; 
-    }
-    
-    .footer-container-privacy p {
-        font-size: 1.2rem; 
-    }
-
-    .ul-social {
-        justify-content: center;
     }
 }
 
-
 @media (min-width: 1200px) {
-
-    header nav {
-        min-height: 5rem;
-        margin: 1.5rem 0; 
-        font-size: 1.75rem; 
-    }
-
-    header nav a {
-        margin: 2.5rem 2.5rem; 
-    }
-
-    footer nav {
-        font-size: 1.75rem; 
-    }
-
-    footer nav a {
-        margin: 0 2rem 2.5rem 2rem; 
-    }
-
-    footer h2 {
-        font-size: 2.75rem; 
-    }
-
-    h1 {
-        font-size: 7rem; 
-    }
-
-    h2 {
-        margin: 5rem; 
-        font-size: 4rem; 
-    }
-
-    h3 {
-        font-size: 3rem; 
-    }
-
-    h4 {
-        font-size: 2rem;
-    }
-
     .main-container-signup h2 {
         margin: 3.5rem; 
-    }
-
-    .input-email {
-        height: 3.5rem; 
-        font-size: 1.75rem; 
-    }
-
-    .submit-email {
-        height: 3.5rem; 
-        font-size: 1.75rem; 
     }
 
     .p-signup {
         font-size: 2rem; 
     }
 
-    .slide-button:after {
-        bottom: -8px; 
-        height: 3px; 
-    }
-
-    .header-container-logo {
-        max-height: 17vh; 
-        margin-top: 3rem;
-    }
-
-    .header-container-logo div:nth-child(2) {
-        display: none;
-    }
-
-    .image-logo {
-        height: 8.5rem; 
-    }
-
-    .p-logo {
-        font-size: 3rem; 
-    }
-
-    .p-welcome {
-        font-size: 3rem; 
-    }
-
-    .shop-name {
-        font-size: 8rem; 
-    }
-
-    .button-explore {
-        font-size: 3rem; 
-    }
-
-    .header-container-welcome {
-        margin-top: 0rem; 
-        padding: 0; 
+    .input-email {
+        height: 3.5rem; 
+        font-size: 1.75rem; 
     }
 
     .image-service {
@@ -1182,12 +1048,8 @@ hr.solid {
         width: 75%; 
     }
 
-    .button-slider {
-        top: 35rem; 
-    }
-
-    .p-disclaimer {
-        font-size: 1.35rem; 
+    .container-review {
+        font-size: 15px; 
     }
 
     .full-star:before {
@@ -1198,17 +1060,13 @@ hr.solid {
         font-size: 35px; 
     }
 
-    svg.button-slider {
-        width: 75px;
-    }
-
-    .container-review {
-        font-size: 15px; 
-    }
-
     .review-profile img {
         width: 100px; 
         height: 100px; 
+    }
+
+    .button-slider {
+        top: 35rem; 
     }
 
     .button-left {
@@ -1217,6 +1075,10 @@ hr.solid {
     
     .button-right {
         right: 3rem; 
+    }
+
+    svg.button-slider {
+        width: 75px;
     }
 
     .main-container-contact div {
@@ -1249,16 +1111,173 @@ hr.solid {
         font-size: 3rem; 
     }
 
+    .main-container-location iframe {
+        width: 100%; 
+        max-width: 600px; 
+        height: 450px; 
+        margin: 4rem; 
+        border: 0;
+    }
+
     .main-container-location p {
         font-size: 1.5rem; 
     }
+}
 
-    .main-container-location iframe {
-        height: 450px; 
-        width: 100%; 
-        max-width: 600px; 
-        margin: 4rem; 
-        border: 0;
+/**** FOOTER  ****/
+
+/* Elements */
+
+footer {
+    width: 100%; 
+    height: auto; 
+    color: #fff; 
+    background-color: #000; 
+}
+
+footer div {
+    justify-content: center;
+    padding-top: 1rem; 
+}
+
+footer div div {
+    align-items: center;
+    justify-content: start;
+}
+
+footer nav {
+    width: auto; 
+    font-size: 1.5rem; 
+}
+
+footer nav a {
+    position: relative; 
+    margin: 1rem; 
+}
+
+footer nav a:hover {
+    color: #fa6f1e; 
+}
+
+footer a {
+    color: #fff; 
+}
+
+footer li:hover a {
+    color: #fa6f1e; 
+}
+
+footer h2 {
+    margin: 0 0 2rem 0;
+    font-size: 2rem; 
+}
+
+/* Classes */
+
+.ul-social {
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 35rem;
+    margin: 3rem 0; 
+    padding: 0; 
+}
+
+.ul-social li {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-sizing: border-box; 
+    width: 5rem; 
+    height: 5rem; 
+    padding: 1rem; 
+    text-align: center; 
+    border-radius: 50%; 
+    border: 2px solid #000; 
+    transition: all 0.3s; 
+}
+
+.ul-social a {
+    font-size: 2rem; 
+}
+
+.ul-social li:hover {
+    border: 2px solid #fa6f1e; 
+}
+
+.container-about {
+    width: auto; 
+    margin: 0 3rem; 
+    font-size: 1.15rem; 
+}
+
+.footer-container-privacy ul {
+    padding: 0; 
+    list-style-type: none;
+}
+
+.footer-container-privacy a {
+    margin: 0.5rem; 
+    font-size: 1.05rem; 
+}
+
+.footer-container-privacy p {
+    margin: 1rem; 
+    font-size: 1.05rem; 
+}
+
+/* Media Query */
+
+@media (min-width: 600px) {
+    footer div {
+        padding-top: 2rem; 
+    }
+
+    footer nav a {
+        margin: 0 1rem 2.5rem 1rem; 
+    }
+
+    footer h2 {
+        align-self: flex-start;
+        font-size: 2.35rem; 
+    }
+
+    .ul-social {
+        justify-content: center;
+        max-width: none;
+    }
+
+    .ul-social li {
+        margin: 0 2rem;  
+    }
+
+    .container-about {
+        width: 50rem; 
+        margin-left: 3.5rem; 
+        margin-right: 2rem; 
+        font-size: 1.35rem; 
+    }
+
+    .footer-container-privacy a {
+        font-size: 1.2rem; 
+    }
+    
+    .footer-container-privacy p {
+        font-size: 1.2rem; 
+    }
+}
+
+@media (min-width: 1200px) {
+    footer nav {
+        font-size: 1.75rem; 
+    }
+
+    footer nav a {
+        margin: 0 2rem 2.5rem 2rem; 
+    }
+
+    footer h2 {
+        font-size: 2.75rem; 
     }
 
     .ul-social li {
@@ -1274,7 +1293,7 @@ hr.solid {
     .footer-container-privacy a {
         font-size: 1.5rem; 
     }
-    
+
     .footer-container-privacy p {
         font-size: 1.5rem; 
     }
