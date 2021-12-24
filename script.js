@@ -5,7 +5,7 @@
         const [entry] = entries;
         entry.target.classList.remove('initial-hidden');
         observer.unobserve(entry.target);
-    }
+    }; 
 
     const sectionObserver = new IntersectionObserver(revealElement, { threshold: [0, 0.1] });
 
@@ -25,25 +25,23 @@
 
     const goToSlide = (slide) => {
         slides.forEach(
-            (s, i) => {
-                s.style.transform = `translateX(${1500 * (i - slide)}px)`; 
-            }
+            (s, i) => s.style.transform = `translateX(${1500 * (i - slide)}px)`
         );
-    }
+    }; 
 
     const handleNextSlide = () => {
         if (currentSlide === maxSlide - 1) currentSlide = 0;
         else currentSlide++;
 
         goToSlide(currentSlide);
-    }
+    }; 
 
     const handlePrevSlide = () => {
         if (currentSlide === 0) currentSlide = maxSlide - 1;
         else currentSlide--;
 
         goToSlide(currentSlide);
-    }
+    }; 
 
     goToSlide(0);
 
@@ -70,9 +68,9 @@
                     formFirstElem.scrollIntoView(); 
                     formFirstElem.focus(); 
                 }
-            })
-        })
-    })
+            }); 
+        }); 
+    }); 
 })(); 
 
 (function runSignupOverlay() {
