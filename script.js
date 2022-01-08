@@ -1,3 +1,7 @@
+window.onunload = () => window.scrollTo(0,0); // Go to top of window when page refreshed
+
+// SLIDING ELEMENTS TRANSITION //
+
 (function translateElements() {
     const initialElem = document.querySelectorAll('.initial-slide');
 
@@ -14,6 +18,8 @@
         element.classList.add('initial-hidden');
     });
 })(); 
+
+// REVIEWS SLIDER //
 
 (function initializeSlider() {
     const slides = document.querySelectorAll('.container-review');
@@ -54,6 +60,8 @@
     });
 })();
 
+// FORM SERVICE INPUT //
+
 (function handleServiceInput() {
     const serviceElems = document.querySelectorAll('.container-service'); 
     const formFirstElem = document.querySelector('form label:first-child input');
@@ -75,6 +83,8 @@
     }); 
 })(); 
 
+// OVERLAY //
+
 (function runSignupOverlay() {
     setTimeout(() => {
         let overlay = document.querySelector('.main-overlay'); 
@@ -82,6 +92,8 @@
         overlay.querySelector('.button-close').addEventListener('click', () => overlay.classList.add('hidden')); 
     }, 12000); 
 })(); 
+
+// NAVIGATION DROPDOWN //
 
 (function handleDropdownMenu() {
     const dropdownBtn = document.querySelector('#menu-toggle'); 
