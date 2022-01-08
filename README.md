@@ -8,3 +8,4 @@ A repo for a landing page for Jimi's Guitar Shop created by David Brunner
 - Responsive Web Development
 - Navigation menus
 - Receiving user input and manipulating the DOM using JavaScript
+- Button animations
