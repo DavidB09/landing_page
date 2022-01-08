@@ -1,9 +1,9 @@
 window.onunload = () => window.scrollTo(0,0); // Go to top of window when page refreshed
 
-// SLIDING ELEMENTS TRANSITION //
+// ELEMENTS TRANSLATE //
 
 (function translateElements() {
-    const initialElem = document.querySelectorAll('.initial-slide');
+    const initialElements = document.querySelectorAll('.initial-slide');
 
     const revealElement = (entries, observer) => {
         const [entry] = entries;
@@ -13,7 +13,7 @@ window.onunload = () => window.scrollTo(0,0); // Go to top of window when page r
 
     const sectionObserver = new IntersectionObserver(revealElement, { threshold: [0, 0.1] });
 
-    initialElem.forEach((element) => {
+    initialElements.forEach((element) => {
         sectionObserver.observe(element);
         element.classList.add('initial-hidden');
     });
@@ -23,8 +23,8 @@ window.onunload = () => window.scrollTo(0,0); // Go to top of window when page r
 
 (function initializeSlider() {
     const slides = document.querySelectorAll('.container-review');
-    const btnLeft = document.querySelector('.button-left');
-    const btnRight = document.querySelector('.button-right');
+    const buttonLeft = document.querySelector('.button-left');
+    const buttonRight = document.querySelector('.button-right');
 
     let currentSlide = 0;
     const maxSlide = slides.length;
@@ -51,8 +51,8 @@ window.onunload = () => window.scrollTo(0,0); // Go to top of window when page r
 
     goToSlide(0);
 
-    btnRight.addEventListener('click', handleNextSlide);
-    btnLeft.addEventListener('click', handlePrevSlide);
+    buttonRight.addEventListener('click', handleNextSlide);
+    buttonLeft.addEventListener('click', handlePrevSlide);
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight') handleNextSlide();
@@ -60,7 +60,7 @@ window.onunload = () => window.scrollTo(0,0); // Go to top of window when page r
     });
 })();
 
-// FORM SERVICE INPUT //
+// FORM INPUT //
 
 (function handleServiceInput() {
     const serviceElems = document.querySelectorAll('.container-service'); 
@@ -102,7 +102,7 @@ window.onunload = () => window.scrollTo(0,0); // Go to top of window when page r
 
     let prevSize; 
 
-    const setHeaderHeight = () => headerNav.style.minHeight = dropdownBtn.checked ? window.innerWidth >= 600 ? '5rem' : '15rem' : '0'; 
+    const setHeaderHeight = () => headerNav.style.minHeight = dropdownBtn.checked ? window.innerWidth >= 600 ? '5rem' : '15rem' : '0'; //5rem if dropdownBtn is checked, 15rem if innerWidth is greater than 600, or 0rem if neither
 
     function checkWindowSize() {
         //If the previous size was medium and the current size is small, or the previous size was small and the current size is medium, show previous header setting
