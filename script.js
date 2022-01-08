@@ -63,6 +63,8 @@
         el.addEventListener('click', () => {
             let attribute = el.getAttribute('data-service'); 
             formElems.forEach(option => {
+
+                //Selects the option value to the service clicked by the user
                 if (option.value == attribute) {
                     option.selected = true; 
                     formFirstElem.scrollIntoView(); 
@@ -88,16 +90,19 @@
 
     let prevSize; 
 
-    const setHeaderHeight = () => headerNav.style.minHeight = dropdownBtn.checked ? window.innerWidth >= 600 ? '5rem' : '15rem' : '0';
+    const setHeaderHeight = () => headerNav.style.minHeight = dropdownBtn.checked ? window.innerWidth >= 600 ? '5rem' : '15rem' : '0'; 
 
     function checkWindowSize() {
+        //If the previous size was medium and the current size is small, or the previous size was small and the current size is medium, show previous header setting
         if (prevSize >= 600 && window.innerWidth < 600 || prevSize < 600 && window.innerWidth >= 600) setHeaderHeight(); 
 
+        //If the previous size was large and the current size is medium, show header when clicked
         if (prevSize >= 1200 && window.innerWidth < 1200) {
             headerNav.style.minHeight = 0; 
             dropdownBtn.addEventListener('click', setHeaderHeight);
         }
 
+        //If previous size was medium and the current size is large, show header
         if (prevSize < 1200 && window.innerWidth >= 1200) {
             document.querySelector('header nav').style.minHeight = '5rem'; 
             dropdownBtn.checked = false; 
