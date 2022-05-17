@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 html {
     font-size: 62.5%; 
     -webkit-transition: 0.5s ease; 
@@ -40,7 +47,7 @@ h1 {
 }
 
 h2 {
-    margin: 0; 
+    margin: 0 0.5rem; 
     font-size: 2rem; 
 }
 
@@ -271,8 +278,7 @@ header {
         -ms-flex-direction: column; 
             flex-direction: column; 
     width: 100%; 
-    height: 100vh; 
-    min-height: 100vh; 
+    height: auto;
 }
 
 header nav {
@@ -370,10 +376,10 @@ header nav a:hover {
     padding: 0; 
     color: #fff; 
     background-image: 
-        -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
+        -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("assets/guitar_background.jpg"); 
     background-image: 
-        -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
         url("assets/guitar_background.jpg"); 
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -401,16 +407,25 @@ header nav a:hover {
 /* Link: https://codepen.io/brownerd/pen/wWOOqj */
 
 .button-explore {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 10rem; 
-    padding: 1rem 2rem; 
+    padding: 3rem 2rem; 
     color: #e05504; 
     font-family: Georgia, serif;
     font-size: 1.75rem; 
-    border: 3px solid #e05504; 
+    -webkit-box-shadow: 0px 0px 0px 3px #e05504; 
+            box-shadow: 0px 0px 0px 3px #e05504; 
     border-radius: 3rem; 
-    -webkit-transition: .2s transform ease-in-out; 
-    -o-transition: .2s transform ease-in-out; 
-    transition: .2s transform ease-in-out; 
+    -webkit-transition: -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s linear; 
+    transition: -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s linear; 
+    -o-transition: transform .2s ease-in-out, box-shadow .2s linear; 
+    transition: transform .2s ease-in-out, box-shadow .2s linear; 
+    transition: transform .2s ease-in-out, box-shadow .2s linear, -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s linear; 
     will-change: transform; 
     overflow: hidden; 
     z-index: 0; 
@@ -424,7 +439,6 @@ header nav a:hover {
     width: 100%; 
     height: 100%; 
     background-color: #e05504; 
-    border-radius: 3rem; 
     -webkit-transform: translate(-100%, 0) rotate(10deg); 
         -ms-transform: translate(-100%, 0) rotate(10deg); 
             transform: translate(-100%, 0) rotate(10deg); 
@@ -440,10 +454,11 @@ header nav a:hover {
 
 .button-explore:hover {
     color: #fff;
-    border: 2px solid #e05504; 
-    -webkit-transform: scale(1.05); 
-        -ms-transform: scale(1.05); 
-            transform: scale(1.05); 
+    -webkit-box-shadow: 0px 0px 0px 0px #e05504;
+            box-shadow: 0px 0px 0px 0px #e05504;
+    -webkit-transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+        -ms-transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+            transform: matrix(1.2, 0, 0, 1.2, 0, 0);
 }
 
 .button-explore:hover::after {
@@ -507,12 +522,17 @@ header nav a:hover {
     }
 
     .button-explore {
-        padding: 1rem 2rem; 
+        padding: 2rem 2rem; 
         font-size: 2.5rem; 
     }
 }
 
 @media (min-width: 1200px) {
+    header {
+        height: 100vh; 
+        min-height: 100vh; 
+    }
+
     header nav {
         min-height: 5rem;
         margin: 1.5rem 0; 
@@ -932,6 +952,7 @@ svg.button-slider:hover .arrow {
 .main-container-contact select {
     margin-top: 0.5rem; 
     font-family: inherit; 
+    font-size: 1.25rem; 
 }
 
 .main-container-contact input {
@@ -1152,6 +1173,12 @@ svg.button-slider:hover .arrow {
 
     .main-container-contact label {
         margin-top: 1.8rem; 
+        font-size: 1.45rem; 
+    }
+
+    .main-container-contact select {
+        margin-top: 0.5rem; 
+        font-family: inherit; 
         font-size: 1.45rem; 
     }
 
