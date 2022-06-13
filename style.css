@@ -318,8 +318,8 @@ header nav a:hover {
     background-color: #fff; 
 }
 
-.header-container-logo div:first-child {
-    margin-right: 5rem; 
+.header-container-logo div:last-child {
+    margin-left: 5rem; 
 }
 
 .image-logo {
@@ -519,7 +519,8 @@ header nav a:hover {
 
 @media (min-width: 1200px) {
     header {
-        min-height: 100vh; 
+        height: 100vh;
+        min-height: 80rem; 
     }
 
     header nav {
@@ -533,11 +534,11 @@ header nav a:hover {
     }
 
     .header-container-logo {
-        max-height: 17vh; 
+        max-height: 17%; 
         margin-top: 3rem;
     }
 
-    .header-container-logo div:nth-child(2) {
+    .header-container-logo div:last-child {
         display: none;
     }
 
