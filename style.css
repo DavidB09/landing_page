@@ -104,7 +104,7 @@ a {
     position: relative;
 }
 
-.slide-button:after {
+.slide-button::after {
     content: ""; 
     position: absolute;
     bottom: -6px; 
@@ -117,7 +117,7 @@ a {
     transition: all .5s; 
 }
 
-.slide-button:hover:after {
+.slide-button:hover::after {
     width: 100%; 
 }
 
@@ -240,7 +240,7 @@ a {
         font-size: 2rem;
     }
 
-    .slide-button:after {
+    .slide-button::after {
         bottom: -8px; 
         height: 3px; 
     }
@@ -672,7 +672,7 @@ main {
 .container-service {
     max-width: 20rem; 
     width: auto; 
-    margin: 3.5rem 3.5rem 4.5rem 3.5rem; 
+    margin: 3.5rem 1.5rem 4.5rem; 
     font-size: 1.25rem;
     text-align: center; 
     border: 0.2rem black solid;
@@ -946,6 +946,7 @@ svg.button-slider:hover .arrow {
 }
 
 .main-container-contact input {
+    position: relative;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; 
     width: 100%; 
@@ -1100,16 +1101,6 @@ svg.button-slider:hover .arrow {
         font-size: 1.5rem; 
     }
 
-    .image-service {
-        display: block;
-        width: 100%;
-        max-width: 25rem; 
-        margin: 3.5rem; 
-        margin-bottom: 0.5rem;
-        border: 0.2rem solid black;
-        border-radius: 0.5rem;
-    }
-
     .container-service {
         width: 100%; 
         max-width: 25rem; 
@@ -1216,6 +1207,18 @@ svg.button-slider:hover .arrow {
 
     .main-container-location p {
         font-size: 1.35rem; 
+    }
+}
+
+@media (min-width: 1000px) {
+    .image-service {
+        display: block;
+        width: 100%;
+        max-width: 25rem; 
+        margin: 1.5rem; 
+        margin-bottom: 0.5rem;
+        border: 0.2rem solid black;
+        border-radius: 0.5rem;
     }
 }
 
