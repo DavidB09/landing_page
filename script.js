@@ -90,7 +90,12 @@ window.onunload = () => window.scrollTo(0,0); // Go to top of window when page r
         let overlay = document.querySelector('.main-overlay'); 
         overlay.classList.remove('hidden'); 
         overlay.querySelector('.button-close').addEventListener('click', () => overlay.classList.add('hidden')); 
-    }, 12000); 
+        overlay.addEventListener('click', (e) => {
+            if (e.target == overlay) {
+                overlay.classList.add('hidden')
+            }
+        });
+    }, 1000); 
 })(); 
 
 // NAVIGATION DROPDOWN //
